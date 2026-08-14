@@ -1,9 +1,6 @@
 # Assistant personnel Raspberry Pi — Guide de projet père/fils
 
-Objectif : un assistant sur Raspberry Pi, écran TFT, micro, interface HTML/CSS moderne, architecture modulaire (météo + IA pour démarrer). Toi tu maîtrises déjà la technique — ce guide est pensé pour te servir de trame pédagogique avec ton fils, avec à chaque étape une piste sur *quoi lui faire faire* et *quoi lui expliquer*, plus le code à implémenter.
-
 Principe général de répartition : **toi tu prépares/débloques, lui il branche/teste/voit le résultat**. Dès qu'un test visuel ou physique est possible, c'est pour lui. Pour le code, laisse-le taper pendant que tu dictes l'intention plutôt que la syntaxe.
-
 ---
 
 ## 0. Vue d'ensemble de l'architecture
