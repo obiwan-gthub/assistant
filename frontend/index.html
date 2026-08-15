@@ -1,13 +1,53 @@
-<!-- frontend/index.html -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Assistant</title>
   <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-  <div id="clock">--:--:--</div>
+  <header id="status-bar">
+    <span id="ws-status" class="ws-status ws-disconnected">Hors ligne</span>
+  </header>
+
+  <main id="pages">
+    <section id="page-clock" class="page active">
+      <div id="clock">--:--:--</div>
+      <div id="date"></div>
+    </section>
+
+    <section id="page-weather" class="page hidden">
+      <div class="card">
+        <div id="weather-temp">--°C</div>
+        <div id="weather-desc">Chargement...</div>
+        <div id="weather-error" class="error hidden"></div>
+      </div>
+    </section>
+
+    <section id="page-assistant" class="page hidden">
+      <div class="card">
+        <div id="assistant-question" class="assistant-label">Question</div>
+        <div id="assistant-answer">En attente...</div>
+        <div id="assistant-error" class="error hidden"></div>
+        <button id="record-btn-assistant" type="button" class="record-btn">Enregistrer</button>
+      </div>
+    </section>
+
+    <section id="page-audio_test" class="page hidden">
+      <h2 class="page-title">Journal audio</h2>
+      <button id="record-btn-test" type="button" class="record-btn">Enregistrer</button>
+      <ul id="audio-log"></ul>
+    </section>
+  </main>
+
+  <nav id="nav-bar">
+    <button data-page="clock" class="nav-btn active" type="button">Horloge</button>
+    <button data-page="weather" class="nav-btn" type="button">Météo</button>
+    <button data-page="assistant" class="nav-btn" type="button">Assistant</button>
+    <button data-page="audio_test" class="nav-btn" type="button">Test</button>
+  </nav>
+
   <script src="/static/app.js"></script>
 </body>
 </html>

@@ -1,0 +1,4 @@
+[Desktop Entry]
+Type=Application
+Name=Assistant Kiosk
+Exec=chromium-browser --kiosk --noerrdialogs --disable-infobars http://localhost:8000
