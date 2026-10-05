@@ -1,0 +1,45 @@
+---
+description: Module contract for backend/modules Python files
+globs: backend/modules/**/*.py
+alwaysApply: false
+---
+
+# Assistant Module Contract
+
+Every file in `backend/modules/` (except `base.py`, `registry.py`, `stt.py`, `brain.py`, `tts.py`) implements `Module`:
+
+```python
+from abc import ABC, abstractmethod
+
+class Module(ABC):
+    name: str = "base"
+
+    @abstractmethod
+    def can_handle(self, query: str) -> bool: ...
+
+    @abstractmethod
+    def run(self, query: str) -> dict: ...
+```
+
+## Rules
+
+- Set a unique class-level `name` matching the frontend page ID (e.g. `"weather"`, `"audio_test"`)
+- `can_handle`: keyword matching on lowercase query — keep lists short and in French
+- `run`: return a flat, JSON-serializable dict — no nested objects unless needed by the frontend
+- Register in `main.py` via `registry.register(MyModule())`
+- `AIModule` must be registered last (`can_handle` always `True`)
+
+## Example
+
+```python
+class WeatherModule(Module):
+    name = "weather"
+
+    def can_handle(self, query: str) -> bool:
+        return any(k in query.lower() for k in ["météo", "temps", "température"])
+
+    def run(self, query: str) -> dict:
+        return {"temperature": 22.5, "description": "Ensoleillé"}
+```
+
+See [ARCHITECTURE.md](../../ARCHITECTURE.md) for the full module list and API details.

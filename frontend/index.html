@@ -7,18 +7,89 @@
   <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
+  <svg xmlns="http://www.w3.org/2000/svg" class="icon-sprite" aria-hidden="true">
+    <symbol id="i-clock" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.75"/>
+      <path d="M12 8v4.2l2.6 1.6" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24">
+      <rect x="4" y="5" width="16" height="15" rx="2" fill="none" stroke="currentColor" stroke-width="1.75"/>
+      <path d="M8 3.5v3M16 3.5v3M4 10h16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="3.5" fill="none" stroke="currentColor" stroke-width="1.75"/>
+      <path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M18.4 5.6 17 7M7 17l-1.4 1.4" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-cloud" viewBox="0 0 24 24">
+      <path d="M7 18h9.2a4 4 0 0 0 .4-8 5.5 5.5 0 0 0-10.6 1.6A3.4 3.4 0 0 0 7 18z" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-cloud-sun" viewBox="0 0 24 24">
+      <circle cx="8" cy="8" r="2.4" fill="none" stroke="currentColor" stroke-width="1.75"/>
+      <path d="M8 3.2v1.4M3.2 8H4.6M5 5l1 1M11 5l-1 1M6.2 16.5h8.4a3.4 3.4 0 0 0 .3-6.8 4.6 4.6 0 0 0-8.8 1.5 2.8 2.8 0 0 0 .1 5.3z" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-rain" viewBox="0 0 24 24">
+      <path d="M7 14h9.2a4 4 0 0 0 .4-8 5.5 5.5 0 0 0-10.6 1.6A3.4 3.4 0 0 0 7 14z" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/>
+      <path d="M8 17.5l-1 2.2M12 17.5l-1 2.2M16 17.5l-1 2.2" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-snow" viewBox="0 0 24 24">
+      <path d="M12 3v18M5.5 6.5l13 11M18.5 6.5l-13 11M4 12h16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-storm" viewBox="0 0 24 24">
+      <path d="M7 14h9.2a4 4 0 0 0 .4-8 5.5 5.5 0 0 0-10.6 1.6A3.4 3.4 0 0 0 7 14z" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/>
+      <path d="M13 14l-2.2 4.2h3L11.5 22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-fog" viewBox="0 0 24 24">
+      <path d="M4 9h16M6 13h12M8 17h8" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24">
+      <path d="M12 3l1.6 5.2L19 10l-5.4 1.8L12 17l-1.6-5.2L5 10l5.4-1.8z" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-mic" viewBox="0 0 24 24">
+      <rect x="9" y="3" width="6" height="11" rx="3" fill="none" stroke="currentColor" stroke-width="1.75"/>
+      <path d="M6 11a6 6 0 0 0 12 0M12 17v4M9 21h6" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-stop" viewBox="0 0 24 24">
+      <rect x="7" y="7" width="10" height="10" rx="2" fill="currentColor" stroke="none"/>
+    </symbol>
+    <symbol id="i-wave" viewBox="0 0 24 24">
+      <path d="M4 12h1.2M7 8v8M10 5v14M13 8v8M16 6v12M19 9v6M21 12h-1" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-online" viewBox="0 0 24 24">
+      <path d="M5 12a8 8 0 0 1 14 0M8 14.5a4.5 4.5 0 0 1 8 0" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+      <circle cx="12" cy="18" r="1.3" fill="currentColor" stroke="none"/>
+    </symbol>
+    <symbol id="i-offline" viewBox="0 0 24 24">
+      <path d="M5 12a8 8 0 0 1 11.2-3.2M19 12a8 8 0 0 0-2.2-3.4M8 14.5a4.5 4.5 0 0 1 6.4-.7" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+      <path d="M5 5l14 14" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+    </symbol>
+  </svg>
+
   <header id="status-bar">
-    <span id="ws-status" class="ws-status ws-disconnected">Hors ligne</span>
+    <span id="ws-status" class="ws-status ws-disconnected">
+      <svg class="icon icon-off"><use href="#i-offline"></use></svg>
+      <svg class="icon icon-on"><use href="#i-online"></use></svg>
+      <span id="ws-label">Hors ligne</span>
+    </span>
   </header>
 
   <main id="pages">
+    <canvas id="dust-canvas" aria-hidden="true"></canvas>
     <section id="page-clock" class="page active">
-      <div id="clock">--:--:--</div>
-      <div id="date"></div>
+      <div class="clock-scene">
+        <div class="clock-orb" aria-hidden="true"></div>
+        <div id="clock" class="clock-display">--:--:--</div>
+        <div class="date-line">
+          <svg class="icon" aria-hidden="true"><use href="#i-calendar"></use></svg>
+          <span id="date"></span>
+        </div>
+      </div>
     </section>
 
     <section id="page-weather" class="page hidden">
       <div class="card">
+        <div class="weather-glyph" id="weather-glyph">
+          <svg class="icon" aria-hidden="true"><use id="weather-icon-use" href="#i-cloud-sun"></use></svg>
+        </div>
         <div id="weather-temp">--°C</div>
         <div id="weather-desc">Chargement...</div>
         <div id="weather-error" class="error hidden"></div>
@@ -27,25 +98,52 @@
 
     <section id="page-assistant" class="page hidden">
       <div class="card">
-        <div id="assistant-question" class="assistant-label">Question</div>
+        <div id="assistant-question" class="assistant-label">
+          <svg class="icon" aria-hidden="true"><use href="#i-spark"></use></svg>
+          <span id="assistant-question-text">Question</span>
+        </div>
         <div id="assistant-answer">En attente...</div>
         <div id="assistant-error" class="error hidden"></div>
-        <button id="record-btn-assistant" type="button" class="record-btn">Enregistrer</button>
+        <button id="record-btn-assistant" type="button" class="record-btn">
+          <svg class="icon icon-mic" aria-hidden="true"><use href="#i-mic"></use></svg>
+          <svg class="icon icon-stop" aria-hidden="true"><use href="#i-stop"></use></svg>
+          <span class="record-label">Enregistrer</span>
+        </button>
       </div>
     </section>
 
     <section id="page-audio_test" class="page hidden">
-      <h2 class="page-title">Journal audio</h2>
-      <button id="record-btn-test" type="button" class="record-btn">Enregistrer</button>
+      <h2 class="page-title">
+        <svg class="icon" aria-hidden="true"><use href="#i-wave"></use></svg>
+        Journal audio
+      </h2>
+      <button id="record-btn-test" type="button" class="record-btn">
+        <svg class="icon icon-mic" aria-hidden="true"><use href="#i-mic"></use></svg>
+        <svg class="icon icon-stop" aria-hidden="true"><use href="#i-stop"></use></svg>
+        <span class="record-label">Enregistrer</span>
+      </button>
       <ul id="audio-log"></ul>
     </section>
   </main>
 
   <nav id="nav-bar">
-    <button data-page="clock" class="nav-btn active" type="button">Horloge</button>
-    <button data-page="weather" class="nav-btn" type="button">Météo</button>
-    <button data-page="assistant" class="nav-btn" type="button">Assistant</button>
-    <button data-page="audio_test" class="nav-btn" type="button">Test</button>
+    <span id="nav-indicator"></span>
+    <button data-page="clock" class="nav-btn active" type="button">
+      <svg class="icon" aria-hidden="true"><use href="#i-clock"></use></svg>
+      <span>Horloge</span>
+    </button>
+    <button data-page="weather" class="nav-btn" type="button">
+      <svg class="icon" aria-hidden="true"><use href="#i-cloud-sun"></use></svg>
+      <span>Météo</span>
+    </button>
+    <button data-page="assistant" class="nav-btn" type="button">
+      <svg class="icon" aria-hidden="true"><use href="#i-spark"></use></svg>
+      <span>Assistant</span>
+    </button>
+    <button data-page="audio_test" class="nav-btn" type="button">
+      <svg class="icon" aria-hidden="true"><use href="#i-wave"></use></svg>
+      <span>Test</span>
+    </button>
   </nav>
 
   <script src="/static/app.js"></script>
